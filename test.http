@@ -1,0 +1,67 @@
+### Create Household
+POST http://127.0.0.1:8080/households
+Content-Type: application/json
+
+{
+  "ownerName": "Priya",
+  "shareRatio": 0.30
+}
+
+###
+
+GET http://127.0.0.1:8080/households
+
+###
+
+POST http://127.0.0.1:8080/generation
+Content-Type: application/json
+
+{
+  "date":"2026-09-28",
+  "totalUnits":500
+}
+
+### Create Generation
+POST http://127.0.0.1:8080/generation
+Content-Type: application/json
+
+{
+  "date":"2026-09-28",
+  "totalUnits":500
+}
+
+###
+
+GET http://127.0.0.1:8080/generation
+
+### Create Installation
+POST http://127.0.0.1:8080/installations
+Content-Type: application/json
+
+{
+  "communityName":"Green Residency",
+  "allocationRatio":1.0
+}
+
+###
+
+GET http://127.0.0.1:8080/installations
+
+### Create Consumption
+POST http://127.0.0.1:8080/consumption
+Content-Type: application/json
+
+{
+  "date":"2026-09-28",
+  "consumedUnits":120,
+  "household":{
+    "id":1
+  }
+}
+
+###
+
+GET http://127.0.0.1:8080/consumption
+
+### Monthly Summary
+GET http://127.0.0.1:8080/summary/1
